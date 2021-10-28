@@ -70,7 +70,6 @@ def _put_trans_data(transCmd, parameters, data, noPad=False):
 	if len(parameters):
 		padLen = 0 if noPad else (4 - offset % 4 ) % 4
 		transCmd['Parameters']['ParameterOffset'] = offset + padLen
-		print(type(parameters))
 		transData = (b'\x00' * padLen) + parameters
 		offset += padLen + len(parameters)
 	
