@@ -13,4 +13,3 @@ Windows Server 2003:
 
 Windows 2000:
 * hSamrChangePasswordUser not working on user without password. Is required to use an alternative method in order to set the first password (eg. RDP)
-* hSamrRidToSid not present on Windows 2000, it reply with a op code error. You have to retrieve the domain SID manually (eg. from the output of hSamrGetMembersInAlias every account is listed with the relative SID, take the vale of the array concatenating them with a "-" and prepend to the result "S-1-5-")
